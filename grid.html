@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".\index.css">
+ </head>
+ <body>
+    <input type="text" class="city" id="city">
+    <button onclick="temp()">Search</button>
+    <p id="cityname"></p>
+    <h1 id="temp"></h1>
+    <script>
+        function temp(){
+            var name1=document.getElementById("city").value;
+            var url=`https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&q=${name1}&appid=${key}`;
+            var key=`851e8c79811e2cfc68bfafae5d895`;
+            fetch(url)
+            .then((data)=>data.json)
+        
+        }
+    </script>
+ </body> 
+ </html>
+      
+
+
