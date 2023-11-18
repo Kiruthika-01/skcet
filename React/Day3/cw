@@ -1,0 +1,17 @@
+import React,{useState} from "react";
+function ToggleMessage()
+{
+const[showMessage,setshowMessage]=useState(false);
+const toggleMessage=()=>{
+    setshowMessage(!showMessage);
+}
+return(
+    <div>
+        <h1>Dashboard</h1>
+        <hr></hr>
+        <button onClic={toggleMessage}>{showMessage ? "Hide Message":"Show Message"}</button>
+    </div>
+);
+}
+export default ToggleMessage;
+
